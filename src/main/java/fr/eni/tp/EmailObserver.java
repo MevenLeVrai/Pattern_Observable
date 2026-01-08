@@ -1,9 +1,10 @@
 package fr.eni.tp;
 
-public class EmailObserver implements Observer{
+public class EmailObserver extends TypedObserver<String> {
 
     @Override
-    public void onChange() {
-        System.out.println("L'email change mais on ne connais pas l'email");
+    public void onChange(String key, String data) {
+        System.out.println(" Appel avec un email envoyé");
+        System.out.println(String.format("L'email change : %s", data));
     }
 }

@@ -1,15 +1,17 @@
 package fr.eni.tp;
 
-public class ContratObserver implements Observer{
+public class ContratObserver extends TypedObserver<String> {
 
-    public String id;
+    public String number;
 
-    public ContratObserver(String _Id){
-        this.id = _Id;
+    public ContratObserver(String number) {
+        this.number = number;
     }
 
     @Override
-    public void onChange() {
-        System.out.println("Le compte numéro : " + id + " à changé");
+    public void onChange(String key, String data) {
+
+        this.number = data;
+
     }
 }

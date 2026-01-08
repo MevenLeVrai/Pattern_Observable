@@ -1,6 +1,6 @@
 package fr.eni.tp;
-public class App {
 
+public class TPObserverMain {
     public static void main(String[] args) {
         // Création de l'observable
         Observable observable = new Observable();

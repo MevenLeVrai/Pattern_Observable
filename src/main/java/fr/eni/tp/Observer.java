@@ -1,5 +1,12 @@
 package fr.eni.tp;
 
-public interface Observer {
-    void onChange();
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+
+public interface Observer<T> {
+
+    public void onChange(String key, T data);
+
+    public Class<T> getType();
+
 }
